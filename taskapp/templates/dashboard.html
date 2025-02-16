@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Dashboard</title>
+</head>
+
+<body>
+    <h2>Dashboard</h2>
+    <p>Available Android Apps:</p>
+    <ul>
+        {% for app in apps %}
+        <li>{{ app.name }} - Points: {{ app.points }}</li>
+        {% empty %}
+        <li>No apps available.</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
